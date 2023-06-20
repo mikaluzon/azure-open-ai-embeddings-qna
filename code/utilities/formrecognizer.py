@@ -20,7 +20,7 @@ class AzureFormRecognizerClient:
         )
         
         poller = document_analysis_client.begin_analyze_document_from_url(
-                "prebuilt-layout", formUrl)
+                "prebuilt-layout", formUrl, locale="he",api_version="2023-02-28-preview")
         layout = poller.result()
 
         results = []
